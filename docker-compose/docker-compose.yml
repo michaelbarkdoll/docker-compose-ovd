@@ -11,3 +11,11 @@ services:
     build: ./railsapp
     ports:
       - 8011:9000
+  
+  guacamole:
+    image: guacamole:1.0
+    networks:
+      - frontend
+    build: ./guacamole
+    ports:
+      - 8081:8080
