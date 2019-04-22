@@ -1,0 +1,13 @@
+version: "3.7"
+
+networks:
+  frontend:
+
+services:
+  railsapp:
+    image: railsapp:1.0
+    networks:
+      - frontend
+    build: ./railsapp
+    ports:
+      - 8011:9000
