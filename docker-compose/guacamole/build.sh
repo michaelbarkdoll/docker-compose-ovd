@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# The following script builds a docker container.
+
 apt-get update; apt-get upgrade -y
 apt-get install git curl -y
 apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common -y
@@ -29,7 +31,7 @@ docker build -t mbarkdoll-test/guacamole .
 
 #ADD index.html /www/index.html
 
-EXPOSE 8080
+#EXPOSE 8080
 
 
 #curl -sSL https://get.docker.com/ | sh
