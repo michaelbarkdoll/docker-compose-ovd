@@ -51,7 +51,7 @@ services:
         target: /var/lib/mysql
       #- "/home/cisadmin/data:/data"
     configs:
-      - source: test
+      - source: test_new
         target: /test
       - source: mysql_initdb
         target: /docker-entrypoint-initdb.d/initdb.sql
@@ -67,7 +67,7 @@ services:
       - guacd
       - mysql
     configs:
-      - source: guacamole_properties
+      - source: guacamole_properties_plain
         target: /guacamole.properties
     environment:
       GUACD_HOSTNAME: guacd
@@ -85,7 +85,11 @@ services:
       LDAP_HOSTNAME: ad.siu.edu
       LDAP_USER_BASE_DN: "dc=ad,dc=siu,dc=edu"
       EXTENSIONS: "auth-ldap"
-      #GUACAMOLE_HOME: /
+      GUACAMOLE_HOME: "/etc/guacamole"
+    secrets:
+      - source: guacamole_properties_secret
+        target: /etc/guacamole/guacamole.properties
+        mode: 644
     image: shotoflove/guacamole-ldap
     links:
     - guacd
@@ -118,13 +122,13 @@ services:
   #  ports:
   #    - 8081:8080
 configs:
-  test:
+  test_new:
     file: ./test
   mysql_initdb:
     file: ./initdb.sql
-  guacamole_properties:
-    file: ./guacamole.properties
+  guacamole_properties_plain:
+    file: ./guacamole.properties.plain
 
-#secrets:
-#  guacamole_properties:
-#    file: ./guacamole.properties
+secrets:
+  guacamole_properties_secret:
+    file: ./guacamole.properties

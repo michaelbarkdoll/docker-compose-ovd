@@ -28,6 +28,9 @@ volumes:
         target: /var/lib/mysql
 ```
 
+# Create a secret for the guacamole.properties
+
+
 ```
 docker service create \
   --name=docker-routing-mesh \
