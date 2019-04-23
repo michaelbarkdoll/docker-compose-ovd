@@ -1,5 +1,5 @@
 #guacd-hostname: swarm-2
-guacd-hostname: test_guacd
+guacd-hostname: guacd
 guacd-port: 4822
 mysql-hostname: swarm-1
 mysql-port: 3306
