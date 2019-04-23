@@ -102,7 +102,7 @@ docker stack ps
 
 Remove a stack and the services, networks from your swarm.
 ```
-docker stack rm teststackname
+docker stack rm test
 ```
 
 Debug:
