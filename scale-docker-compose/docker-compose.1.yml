@@ -1,0 +1,147 @@
+version: "3.7"
+
+# This version uses host mode networking rather than deploy dnsrr
+# Nodes are accessed directly on ingress swarm load-balancing in use, but also no DNS service discovery for external reverse proxy load-balancing
+
+networks:
+  frontend:
+
+volumes:
+  drive:
+  record:
+  mysql:
+
+services:
+  guacd:
+    #container_name: guacd_compose
+    image: shotoflove/guacamole-server
+    #image: guacamole/guacd
+    networks:
+      - frontend
+    restart: always
+    deploy:
+      mode: replicated
+      replicas: 3
+    volumes:
+      - type: volume
+        source: drive
+        target: /drive
+        # Stores on the swarm node volume that is running the guacd container into file: 
+        # /var/lib/docker/volumes/test_drive/_data
+        #
+        # where test is the name of the stack
+      - type: volume
+        source: record
+        target: /record
+        # /var/lib/docker/volumes/test_record/_data
+
+#      - ${USERDIR}/docker/guacamole-docker-compose/drive:/drive:rw
+#      - ${USERDIR}/docker/guacamole-docker-compose/record:/record:rw
+    ports:
+      - 4822:4822
+
+  mysql:
+    image: mysql:8.0.15
+    networks:
+      - frontend
+    restart: always
+    environment:
+      VAR: /data
+      MYSQL_ROOT_PASSWORD: somepassword
+      MYSQL_DATABASE: guacamole_db
+      MYSQL_USER: guacamole_user
+      MYSQL_PASSWORD: some_password
+    volumes:
+      - type: volume
+        source: mysql
+        target: /var/lib/mysql
+      #- "/home/cisadmin/data:/data"
+    configs:
+      - source: test_new
+        target: /test
+      - source: mysql_initdb
+        target: /docker-entrypoint-initdb.d/initdb.sql
+    deploy:
+      placement:
+        constraints: [node.role == manager]
+    # /docker-entrypoint-initdb.d
+    ports:
+      - 3306:3306
+
+  guacamole:
+    depends_on:
+      - guacd
+      - mysql
+    configs:
+      - source: guacamole_properties_plain
+        target: /guacamole.properties
+    environment:
+      GUACD_HOSTNAME: guacd
+      #POSTGRES_DATABASE: guacamole_db
+      #POSTGRES_HOSTNAME: postgres
+      #POSTGRES_PASSWORD: password
+      #POSTGRES_USER: guacamole_user
+      MYSQL_DATABASE: guacamole_db
+      MYSQL_USER: root
+      MYSQL_PASSWORD: somepassword
+      MYSQL_HOSTNAME: mysql
+      MYSQL_PORT: 3306
+      LDAP_PORT: "636"
+      LDAP_ENCRYPTION_METHOD: "ssl"
+      LDAP_HOSTNAME: ad.siu.edu
+      LDAP_USER_BASE_DN: "dc=ad,dc=siu,dc=edu"
+      EXTENSIONS: "auth-ldap"
+      GUACAMOLE_HOME: "/etc/guacamole"
+    secrets:
+      - source: guacamole_properties_secret
+        target: /etc/guacamole/guacamole.properties
+        mode: 644
+    image: shotoflove/guacamole-ldap
+    links:
+    - guacd
+    networks:
+      - frontend
+    deploy:
+      mode: replicated
+      replicas: 3
+    ports:
+      - target: 8080
+        published: 8082
+        protocol: tcp
+        mode: host
+    #- 8082:8080/tcp
+    restart: always
+
+#sudo docker run --name some-guacamole 
+#--link some-guacd:guacd --link some-mysql:mysql 
+#-e MYSQL_DATABASE=guacamole_db -e MYSQL_USER=root -e MYSQL_PASSWORD=secret -e MYSQL_HOSTNAME=some_mysql -e MYSQL_PORT=3306 -e "LDAP_PORT=636" -e "LDAP_ENCRYPTION_METHOD=ssl" -e LDAP_HOSTNAME=ad.siu.edu -e "LDAP_USER_BASE_DN=dc=ad,dc=siu,dc=edu" -e "EXTENSIONS=auth-ldap" 
+
+#-v /home/cisadmin/guacamole/test:/home/cisadmin/guacamole/test 
+#-e GUACAMOLE_HOME=/home/cisadmin/guacamole/test -p 8080:8080 mbarkdoll-test/guacamole
+
+  #railsapp:
+  #  image: railsapp:1.0
+  #  networks:
+  #    - frontend
+  #  build: ./railsapp
+  #  ports:
+  #    - 8011:9000
+  #
+  #guacamole:
+  #  image: guacamole:1.0
+  #  networks:
+  #    - frontend
+  #  build: ./guacamole
+  #  ports:
+  #    - 8081:8080
+configs:
+  test_new:
+    file: ./test
+  mysql_initdb:
+    file: ./initdb.sql
+  guacamole_properties_plain:
+    file: ./guacamole.properties.plain
+
+secrets:
+  guacamole_properties_secret:
+    file: ./guacamole.properties

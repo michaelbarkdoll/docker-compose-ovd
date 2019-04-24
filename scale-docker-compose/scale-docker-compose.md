@@ -148,4 +148,13 @@ for i in 1 2 3; do
 done
 ```
 
+From guacamole/nginx proxy service with endpoint dnsrr
+Get a list of DNS records for the frontend:
+```
+docker-machine ssh swarm-$i
+docker exec -it containerid /bin/bash
+apt-get update
+apt-get install dns-utils
+dig guacamole
+```
 
