@@ -11,20 +11,20 @@ The following bash script handles creating the machines inside cloudstack
 #!/bin/bash
 
 for i in 1 2 3; do
-    #docker-machine create -d virtualbox swarm-$i
 
-    docker-machine -D create -d cloudstack \
-    --cloudstack-api-url http://cloud.cs.siu.edu:8080/client/api \
-    --cloudstack-api-key  <API_KEY_GOES_HERE> \
-    --cloudstack-secret-key  <SECRET_KEY_GOES_HERE> \
-    --cloudstack-template "Ubuntu 19 v1.2" \
-    --cloudstack-zone "zone" \
-    --cloudstack-service-offering "1GHz @ 4xCPU, 4GB of Ram" \
-    --cloudstack-network CSOVD \
-    --cloudstack-use-port-forward \
-    --cloudstack-use-private-address \
-    --cloudstack-expunge \
-    swarm-$i
+docker-machine -D create -d cloudstack \
+  --cloudstack-api-url http://cloud.cs.siu.edu:8080/client/api \
+  --cloudstack-api-key 3Z297lweqfzP30mzn-cioDP2-KkEVrzOxqYB4A7mgKnbwHNWNX7V3exNn8U0xAW-slKopSWNHJfe4P42M32PDw \
+  --cloudstack-secret-key uyx3d6ToJ41FlFHVTkIZji3EUCyLzW1yGdQzHU5frqVQMBhU5XZCG76tWP2a7RfGcaoxI0C-TBnbFdVwM0rraQ \
+  --cloudstack-template "Ubuntu 19 v1.2" \
+  --cloudstack-zone "zone" \
+  --cloudstack-service-offering "1GHz @ 4xCPU, 4GB of Ram" \
+  --cloudstack-network CSOVD \
+  --cloudstack-use-port-forward \
+  --cloudstack-use-private-address \
+  --cloudstack-expunge \
+  swarm-$i
+
 done
 ```
 
@@ -112,18 +112,32 @@ docker service ps --no-trunc {serviceName}
 
 ```
 
+# Backup ssh keys
+```
+cp ~/.docker/machine/machines/swarm-1/id-rsa ~
+cp ~/.docker/machine/machines/swarm-1/id-rsa.pub ~
+```
+
 
 # Swarm Deletion
 
 Cause a node currently connected to swarm to leave the swarm:
 ```
-ssh swarm-3
+docker-machine ssh swarm-3
 docker swarm leave
-ssh swarm-2
+exit
+docker node rm swarm-3
+docker-machine ssh swarm-2
 docker swarm leave
-ssh swarm-1
-docker swarm leave
+exit
+docker node rm swarm-2
+docker swarm leave --force
 ```
+
+```
+docker service rm visualizer
+```
+
 
 Delete the docker-machine VM's from cloudstack
 ```
