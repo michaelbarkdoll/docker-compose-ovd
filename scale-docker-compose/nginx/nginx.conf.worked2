@@ -13,13 +13,8 @@ http {
         server 10.0.12.15:8080;
     }
 
-    #https://docs.nginx.com/nginx/deployment-guides/node-js-load-balancing-nginx-plus/#websocket
     upstream guacamoleservers {
-        # Clients with the same IP are redirected to the same backend
-        ip_hash;
-
         server guacamole:8080;
-        server guacamole2:8080;
     }
 
     resolver 127.0.0.11 valid=10s;

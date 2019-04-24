@@ -14,8 +14,8 @@ for i in 1 2 3; do
 
 docker-machine -D create -d cloudstack \
   --cloudstack-api-url http://cloud.cs.siu.edu:8080/client/api \
-  --cloudstack-api-key 3Z297lweqfzP30mzn-cioDP2-KkEVrzOxqYB4A7mgKnbwHNWNX7V3exNn8U0xAW-slKopSWNHJfe4P42M32PDw \
-  --cloudstack-secret-key uyx3d6ToJ41FlFHVTkIZji3EUCyLzW1yGdQzHU5frqVQMBhU5XZCG76tWP2a7RfGcaoxI0C-TBnbFdVwM0rraQ \
+  --cloudstack-api-key  \
+  --cloudstack-secret-key  \
   --cloudstack-template "Ubuntu 19 v1.2" \
   --cloudstack-zone "zone" \
   --cloudstack-service-offering "1GHz @ 4xCPU, 4GB of Ram" \

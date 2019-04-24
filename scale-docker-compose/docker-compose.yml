@@ -11,6 +11,34 @@ volumes:
   mysql:
 
 services:
+######  guacd:
+######    #container_name: guacd_compose
+######    image: shotoflove/guacamole-server
+######    #image: guacamole/guacd
+######    networks:
+######      - frontend
+######    restart: always
+######    deploy:
+######      mode: replicated
+######      replicas: 3
+######    volumes:
+######      - type: volume
+######        source: drive
+######        target: /drive
+######        # Stores on the swarm node volume that is running the guacd container into file: 
+######        # /var/lib/docker/volumes/test_drive/_data
+######        #
+######        # where test is the name of the stack
+######      - type: volume
+######        source: record
+######        target: /record
+######        # /var/lib/docker/volumes/test_record/_data
+######
+#######      - ${USERDIR}/docker/guacamole-docker-compose/drive:/drive:rw
+#######      - ${USERDIR}/docker/guacamole-docker-compose/record:/record:rw
+######    ports:
+######      - 4822:4822
+
   guacd:
     #container_name: guacd_compose
     image: shotoflove/guacamole-server
@@ -21,6 +49,11 @@ services:
     deploy:
       mode: replicated
       replicas: 3
+      endpoint_mode: dnsrr
+      placement:
+        constraints:
+          - node.hostname != swarm-xrdp-1
+          - node.hostname != swarm-xrdp-2
     volumes:
       - type: volume
         source: drive
@@ -36,9 +69,9 @@ services:
 
 #      - ${USERDIR}/docker/guacamole-docker-compose/drive:/drive:rw
 #      - ${USERDIR}/docker/guacamole-docker-compose/record:/record:rw
-    ports:
-      - 4822:4822
-
+    #####ports:
+    #####  - 4822:4822
+    
   mysql:
     image: mysql:8.0.15
     networks:
@@ -80,6 +113,11 @@ services:
         constraints: [node.role == manager]
     ports:
       - 80:80
+    depends_on:
+      - guacd
+      - mysql
+      - guacamole
+      - guacamole2
 
   guacamole:
     depends_on:
@@ -116,8 +154,12 @@ services:
       - frontend
     deploy:
       mode: replicated
-      replicas: 3
+      replicas: 1
       endpoint_mode: dnsrr
+      placement:
+        constraints:
+          - node.hostname != swarm-xrdp-1
+          - node.hostname != swarm-xrdp-2
 ###    ports:
 ###      - target: 8080
 ###        published: 8082
@@ -129,6 +171,42 @@ services:
 ##        protocol: tcp
 ##        #mode: host
     #- 8082:8080/tcp
+    restart: always
+
+  guacamole2:
+    depends_on:
+      - guacd
+      - mysql
+    environment:
+      GUACD_HOSTNAME: guacd
+      MYSQL_DATABASE: guacamole_db
+      MYSQL_USER: root
+      MYSQL_PASSWORD: somepassword
+      MYSQL_HOSTNAME: mysql
+      MYSQL_PORT: 3306
+      LDAP_PORT: "636"
+      LDAP_ENCRYPTION_METHOD: "ssl"
+      LDAP_HOSTNAME: ad.siu.edu
+      LDAP_USER_BASE_DN: "dc=ad,dc=siu,dc=edu"
+      EXTENSIONS: "auth-ldap"
+      GUACAMOLE_HOME: "/etc/guacamole"
+    secrets:
+      - source: guacamole_properties_secret
+        target: /etc/guacamole/guacamole.properties
+        mode: 644
+    image: shotoflove/guacamole-ldap
+    links:
+    - guacd
+    networks:
+      - frontend
+    deploy:
+      mode: replicated
+      replicas: 1
+      endpoint_mode: dnsrr
+      placement:
+        constraints:
+          - node.hostname != swarm-xrdp-1
+          - node.hostname != swarm-xrdp-2
     restart: always
 
 #sudo docker run --name some-guacamole 
