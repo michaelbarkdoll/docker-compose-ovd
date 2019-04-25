@@ -294,3 +294,178 @@ vdi_guacamole2.1.iytle5jay8ee@swarm-3    |      at org.apache.tomcat.util.thread
 vdi_guacamole2.1.iytle5jay8ee@swarm-3    |      at java.lang.Thread.run(Thread.java:748) [na:1.8.0_212]
 vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:04:52.832 [http-nio-8080-exec-7] WARN  o.a.g.e.AuthenticationProviderFacade - The "ldap" authentication provider has encountered an internal error which will halt the authentication process. If this is unexpected or you are the developer of this authentication provider, you may wish to enable debug-level logging. If this is expected and you wish to ignore such failures in the future, please set "skip-if-unavailable: ldap" within your guacamole.properties.
 vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:04:52.832 [http-nio-8080-exec-7] WARN  o.a.g.r.auth.AuthenticationService - Authentication attempt from [10.255.0.2, 10.0.19.11] for user "userX" failed.
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:10:07.680 [http-nio-8080-exec-4] INFO  o.a.g.r.auth.AuthenticationService - User "userX" successfully authenticated from [10.255.0.2, 10.0.19.11].
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:10:08.177 [http-nio-8080-exec-8] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" connected to connection "1".
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:10:09.580 [Thread-34] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" disconnected from connection "1". Duration: 1403 milliseconds
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:10:13.304 [http-nio-8080-exec-3] INFO  o.a.g.r.auth.AuthenticationService - User "userX" successfully authenticated from [10.255.0.2, 10.0.19.11].
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:10:13.665 [http-nio-8080-exec-5] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" connected to connection "1".
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:10:14.588 [Thread-36] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" disconnected from connection "1". Duration: 923 milliseconds
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:10:22.374 [http-nio-8080-exec-6] INFO  o.a.g.r.auth.AuthenticationService - User "userX" successfully authenticated from [10.255.0.2, 10.0.19.11].
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:10:22.809 [http-nio-8080-exec-7] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" connected to connection "1".
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:10:24.594 [Thread-38] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" disconnected from connection "1". Duration: 1785 milliseconds
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:10:28.258 [http-nio-8080-exec-10] INFO  o.a.g.r.auth.AuthenticationService - User "userX" successfully authenticated from [10.255.0.2, 10.0.19.11].
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:10:28.625 [http-nio-8080-exec-7] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" connected to connection "1".
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:10:29.625 [http-nio-8080-exec-2] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" disconnected from connection "1". Duration: 1000 milliseconds
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:10:46.493 [http-nio-8080-exec-10] INFO  o.a.g.r.auth.AuthenticationService - User "userX" successfully authenticated from [10.255.0.2, 10.0.19.11].
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:10:46.858 [http-nio-8080-exec-7] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" connected to connection "1".
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:10:48.039 [http-nio-8080-exec-1] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" disconnected from connection "1". Duration: 1181 milliseconds
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:10:56.451 [http-nio-8080-exec-8] INFO  o.a.g.r.auth.AuthenticationService - User "userX" successfully authenticated from [10.255.0.2, 10.0.19.11].
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:10:56.813 [http-nio-8080-exec-3] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" connected to connection "1".
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:11:00.500 [Thread-44] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" disconnected from connection "1". Duration: 3687 milliseconds
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:11:07.052 [http-nio-8080-exec-5] INFO  o.a.g.r.auth.AuthenticationService - User "userX" successfully authenticated from [10.255.0.2, 10.0.19.11].
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:11:07.433 [http-nio-8080-exec-4] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" connected to connection "1".
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:11:08.962 [http-nio-8080-exec-6] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" disconnected from connection "1". Duration: 1529 milliseconds
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:11:14.946 [http-nio-8080-exec-9] INFO  o.a.g.r.auth.AuthenticationService - User "userX" successfully authenticated from [10.255.0.2, 10.0.19.11].
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:11:15.397 [http-nio-8080-exec-4] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" connected to connection "1".
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:11:16.338 [Thread-48] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" disconnected from connection "1". Duration: 941 milliseconds
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:11:20.136 [http-nio-8080-exec-10] INFO  o.a.g.r.auth.AuthenticationService - User "userX" successfully authenticated from [10.255.0.2, 10.0.19.11].
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:11:20.606 [http-nio-8080-exec-2] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" connected to connection "1".
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:11:21.634 [http-nio-8080-exec-9] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" disconnected from connection "1". Duration: 1027 milliseconds
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:11:30.898 [http-nio-8080-exec-2] INFO  o.a.g.r.auth.AuthenticationService - User "userX" successfully authenticated from [10.255.0.2, 10.0.19.11].
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:11:31.347 [http-nio-8080-exec-3] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" connected to connection "1".
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:11:32.318 [Thread-52] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" disconnected from connection "1". Duration: 971 milliseconds
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:11:36.610 [http-nio-8080-exec-10] INFO  o.a.g.r.auth.AuthenticationService - User "userX" successfully authenticated from [10.255.0.2, 10.0.19.11].
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:11:36.967 [http-nio-8080-exec-2] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" connected to connection "1".
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:11:38.100 [http-nio-8080-exec-10] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" disconnected from connection "1". Duration: 1133 milliseconds
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:11:43.537 [http-nio-8080-exec-4] INFO  o.a.g.r.auth.AuthenticationService - User "userX" successfully authenticated from [10.255.0.2, 10.0.19.11].
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:11:43.962 [http-nio-8080-exec-10] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" connected to connection "1".
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:11:45.310 [http-nio-8080-exec-5] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" disconnected from connection "1". Duration: 1347 milliseconds
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:11:49.017 [http-nio-8080-exec-4] INFO  o.a.g.r.auth.AuthenticationService - User "userX" successfully authenticated from [10.255.0.2, 10.0.19.11].
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:11:49.383 [http-nio-8080-exec-10] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" connected to connection "1".
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:11:50.310 [http-nio-8080-exec-3] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" disconnected from connection "1". Duration: 927 milliseconds
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:11:55.196 [http-nio-8080-exec-6] INFO  o.a.g.r.auth.AuthenticationService - User "userX" successfully authenticated from [10.255.0.2, 10.0.19.11].
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:11:55.637 [http-nio-8080-exec-3] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" connected to connection "1".
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:11:57.178 [Thread-60] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" disconnected from connection "1". Duration: 1541 milliseconds
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:12:00.732 [http-nio-8080-exec-6] INFO  o.a.g.r.auth.AuthenticationService - User "userX" successfully authenticated from [10.255.0.2, 10.0.19.11].
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:12:01.096 [http-nio-8080-exec-3] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" connected to connection "1".
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:12:02.078 [http-nio-8080-exec-8] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" disconnected from connection "1". Duration: 981 milliseconds
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:12:09.560 [http-nio-8080-exec-5] INFO  o.a.g.r.auth.AuthenticationService - User "userX" successfully authenticated from [10.255.0.2, 10.0.19.11].
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:12:09.933 [http-nio-8080-exec-4] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" connected to connection "1".
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:12:11.482 [Thread-64] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" disconnected from connection "1". Duration: 1549 milliseconds
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:12:16.981 [http-nio-8080-exec-8] INFO  o.a.g.r.auth.AuthenticationService - User "userX" successfully authenticated from [10.255.0.2, 10.0.19.11].
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:12:17.421 [http-nio-8080-exec-3] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" connected to connection "1".
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:12:19.724 [http-nio-8080-exec-4] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" disconnected from connection "1". Duration: 2303 milliseconds
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:12:22.423 [http-nio-8080-exec-3] INFO  o.a.g.r.auth.AuthenticationService - User "userX" successfully authenticated from [10.255.0.2, 10.0.19.11].
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:12:22.793 [http-nio-8080-exec-6] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" connected to connection "1".
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:12:23.850 [Thread-68] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" disconnected from connection "1". Duration: 1057 milliseconds
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:12:28.905 [http-nio-8080-exec-6] INFO  o.a.g.r.auth.AuthenticationService - User "userX" successfully authenticated from [10.255.0.2, 10.0.19.11].
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:12:29.330 [http-nio-8080-exec-1] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" connected to connection "1".
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:12:30.284 [Thread-70] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" disconnected from connection "1". Duration: 953 milliseconds
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:12:33.347 [http-nio-8080-exec-10] INFO  o.a.g.r.auth.AuthenticationService - User "userX" successfully authenticated from [10.255.0.2, 10.0.19.11].
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:12:33.711 [http-nio-8080-exec-3] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" connected to connection "1".
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:12:34.804 [Thread-72] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" disconnected from connection "1". Duration: 1093 milliseconds
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:12:40.187 [http-nio-8080-exec-6] INFO  o.a.g.r.auth.AuthenticationService - User "userX" successfully authenticated from [10.255.0.2, 10.0.19.11].
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:12:40.595 [http-nio-8080-exec-9] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" connected to connection "1".
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:12:41.637 [http-nio-8080-exec-10] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" disconnected from connection "1". Duration: 1041 milliseconds
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:12:46.386 [http-nio-8080-exec-9] INFO  o.a.g.r.auth.AuthenticationService - User "userX" successfully authenticated from [10.255.0.2, 10.0.19.11].
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:12:46.746 [http-nio-8080-exec-8] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" connected to connection "1".
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:12:47.784 [http-nio-8080-exec-1] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" disconnected from connection "1". Duration: 1037 milliseconds
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:12:53.789 [http-nio-8080-exec-4] INFO  o.a.g.r.auth.AuthenticationService - User "userX" successfully authenticated from [10.255.0.2, 10.0.19.11].
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:12:54.214 [http-nio-8080-exec-1] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" connected to connection "1".
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:12:55.337 [Thread-78] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" disconnected from connection "1". Duration: 1122 milliseconds
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:13:00.106 [http-nio-8080-exec-4] INFO  o.a.g.r.auth.AuthenticationService - User "userX" successfully authenticated from [10.255.0.2, 10.0.19.11].
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:13:00.467 [http-nio-8080-exec-1] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" connected to connection "1".
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:13:01.372 [Thread-80] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" disconnected from connection "1". Duration: 905 milliseconds
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:13:06.702 [http-nio-8080-exec-4] INFO  o.a.g.r.auth.AuthenticationService - User "userX" successfully authenticated from [10.255.0.2, 10.0.19.11].
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:13:07.141 [http-nio-8080-exec-5] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" connected to connection "1".
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:13:08.604 [Thread-82] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" disconnected from connection "1". Duration: 1462 milliseconds
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:13:13.042 [http-nio-8080-exec-6] INFO  o.a.g.r.auth.AuthenticationService - User "userX" successfully authenticated from [10.255.0.2, 10.0.19.11].
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:13:13.398 [http-nio-8080-exec-3] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" connected to connection "1".
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:13:15.055 [Thread-84] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" disconnected from connection "1". Duration: 1657 milliseconds
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:13:20.550 [http-nio-8080-exec-9] INFO  o.a.g.r.auth.AuthenticationService - User "userX" successfully authenticated from [10.255.0.2, 10.0.19.11].
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:13:20.979 [http-nio-8080-exec-4] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" connected to connection "1".
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:13:21.946 [Thread-86] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" disconnected from connection "1". Duration: 967 milliseconds
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:13:25.582 [http-nio-8080-exec-7] INFO  o.a.g.r.auth.AuthenticationService - User "userX" successfully authenticated from [10.255.0.2, 10.0.19.11].
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:13:25.942 [http-nio-8080-exec-5] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" connected to connection "1".
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:13:26.854 [http-nio-8080-exec-10] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" disconnected from connection "1". Duration: 912 milliseconds
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:13:32.709 [http-nio-8080-exec-8] INFO  o.a.g.r.auth.AuthenticationService - User "userX" successfully authenticated from [10.255.0.2, 10.0.19.11].
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:13:33.082 [http-nio-8080-exec-4] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" connected to connection "1".
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:13:34.761 [Thread-90] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" disconnected from connection "1". Duration: 1679 milliseconds
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:13:41.866 [http-nio-8080-exec-2] INFO  o.a.g.r.auth.AuthenticationService - User "userX" successfully authenticated from [10.255.0.2, 10.0.19.11].
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:13:42.230 [http-nio-8080-exec-6] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" connected to connection "1".
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:13:43.522 [Thread-92] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" disconnected from connection "1". Duration: 1292 milliseconds
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:13:49.641 [http-nio-8080-exec-2] INFO  o.a.g.r.auth.AuthenticationService - User "userX" successfully authenticated from [10.255.0.2, 10.0.19.11].
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:13:49.982 [http-nio-8080-exec-8] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" connected to connection "1".
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:13:51.211 [http-nio-8080-exec-7] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" disconnected from connection "1". Duration: 1228 milliseconds
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:13:56.353 [http-nio-8080-exec-5] INFO  o.a.g.r.auth.AuthenticationService - User "userX" successfully authenticated from [10.255.0.2, 10.0.19.11].
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:13:56.706 [http-nio-8080-exec-1] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" connected to connection "1".
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:13:57.724 [http-nio-8080-exec-9] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" disconnected from connection "1". Duration: 1018 milliseconds
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:14:02.476 [http-nio-8080-exec-5] INFO  o.a.g.r.auth.AuthenticationService - User "userX" successfully authenticated from [10.255.0.2, 10.0.19.11].
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:14:02.830 [http-nio-8080-exec-1] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" connected to connection "1".
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:14:03.862 [http-nio-8080-exec-8] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" disconnected from connection "1". Duration: 1032 milliseconds
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:14:09.036 [http-nio-8080-exec-7] INFO  o.a.g.r.auth.AuthenticationService - User "userX" successfully authenticated from [10.255.0.2, 10.0.19.11].
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:14:09.406 [http-nio-8080-exec-9] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" connected to connection "1".
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:14:10.682 [Thread-100] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" disconnected from connection "1". Duration: 1276 milliseconds
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:14:15.346 [http-nio-8080-exec-7] INFO  o.a.g.r.auth.AuthenticationService - User "userX" successfully authenticated from [10.255.0.2, 10.0.19.11].
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:14:15.710 [http-nio-8080-exec-9] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" connected to connection "1".
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:14:16.763 [Thread-102] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" disconnected from connection "1". Duration: 1053 milliseconds
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:14:21.371 [http-nio-8080-exec-3] INFO  o.a.g.r.auth.AuthenticationService - User "userX" successfully authenticated from [10.255.0.2, 10.0.19.11].
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:14:21.726 [http-nio-8080-exec-2] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" connected to connection "1".
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:14:22.750 [Thread-104] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" disconnected from connection "1". Duration: 1024 milliseconds
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:14:46.415 [http-nio-8080-exec-7] INFO  o.a.g.r.auth.AuthenticationService - User "userX" successfully authenticated from [10.255.0.2, 10.0.19.11].
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:14:46.842 [http-nio-8080-exec-2] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" connected to connection "1".
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:14:47.954 [Thread-106] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" disconnected from connection "1". Duration: 1112 milliseconds
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:14:52.403 [http-nio-8080-exec-1] INFO  o.a.g.r.auth.AuthenticationService - User "userX" successfully authenticated from [10.255.0.2, 10.0.19.11].
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:14:52.758 [http-nio-8080-exec-5] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" connected to connection "1".
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:14:53.697 [http-nio-8080-exec-9] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" disconnected from connection "1". Duration: 939 milliseconds
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:15:01.448 [http-nio-8080-exec-7] INFO  o.a.g.r.auth.AuthenticationService - User "userX" successfully authenticated from [10.255.0.2, 10.0.19.11].
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:15:01.802 [http-nio-8080-exec-8] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" connected to connection "1".
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:15:02.684 [Thread-110] INFO  o.a.g.tunnel.TunnelRequestService - User "userX" disconnected from connection "1". Duration: 882 milliseconds
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:15:48.123 [http-nio-8080-exec-1] ERROR o.a.d.l.c.api.LdapNetworkConnection - ERR_04122_SSL_CONTEXT_INIT_FAILURE Failed to initialize the SSL context
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | java.lang.NullPointerException: null
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    |      at org.apache.directory.ldap.client.api.LdapNetworkConnection.connect(LdapNetworkConnection.java:689) ~[guacamole-auth-ldap-1.0.0.jar:na]
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    |      at org.apache.guacamole.auth.ldap.LDAPConnectionService.bindAs(LDAPConnectionService.java:137) [guacamole-auth-ldap-1.0.0.jar:na]
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    |      at org.apache.guacamole.auth.ldap.AuthenticationProviderService.getUserBindDN(AuthenticationProviderService.java:120) [guacamole-auth-ldap-1.0.0.jar:na]
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    |      at org.apache.guacamole.auth.ldap.AuthenticationProviderService.authenticateUser(AuthenticationProviderService.java:193) [guacamole-auth-ldap-1.0.0.jar:na]
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    |      at org.apache.guacamole.auth.ldap.LDAPAuthenticationProvider.authenticateUser(LDAPAuthenticationProvider.java:77) [guacamole-auth-ldap-1.0.0.jar:na]
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    |      at org.apache.guacamole.extension.AuthenticationProviderFacade.authenticateUser(AuthenticationProviderFacade.java:190) [classes/:na]
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    |      at org.apache.guacamole.rest.auth.AuthenticationService.authenticateUser(AuthenticationService.java:168) [classes/:na]
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    |      at org.apache.guacamole.rest.auth.AuthenticationService.getAuthenticatedUser(AuthenticationService.java:288) [classes/:na]
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    |      at org.apache.guacamole.rest.auth.AuthenticationService.authenticate(AuthenticationService.java:441) [classes/:na]
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    |      at org.apache.guacamole.rest.auth.TokenRESTService.createToken(TokenRESTService.java:173) [classes/:na]
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    |      at sun.reflect.GeneratedMethodAccessor85.invoke(Unknown Source) ~[na:na]
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    |      at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_212]
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    |      at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_212]
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    |      at com.sun.jersey.spi.container.JavaMethodInvokerFactory$1.invoke(JavaMethodInvokerFactory.java:60) [jersey-server-1.17.1.jar:1.17.1]
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    |      at com.sun.jersey.server.impl.model.method.dispatch.AbstractResourceMethodDispatchProvider$TypeOutInvoker._dispatch(AbstractResourceMethodDispatchProvider.java:185) [jersey-server-1.17.1.jar:1.17.1]
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    |      at com.sun.jersey.server.impl.model.method.dispatch.ResourceJavaMethodDispatcher.dispatch(ResourceJavaMethodDispatcher.java:75) [jersey-server-1.17.1.jar:1.17.1]
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    |      at com.sun.jersey.server.impl.uri.rules.HttpMethodRule.accept(HttpMethodRule.java:302) [jersey-server-1.17.1.jar:1.17.1]
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    |      at com.sun.jersey.server.impl.uri.rules.ResourceClassRule.accept(ResourceClassRule.java:108) [jersey-server-1.17.1.jar:1.17.1]
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    |      at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147) [jersey-server-1.17.1.jar:1.17.1]
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    |      at com.sun.jersey.server.impl.uri.rules.RootResourceClassesRule.accept(RootResourceClassesRule.java:84) [jersey-server-1.17.1.jar:1.17.1]
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    |      at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1511) [jersey-server-1.17.1.jar:1.17.1]
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    |      at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1442) [jersey-server-1.17.1.jar:1.17.1]
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    |      at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1391) [jersey-server-1.17.1.jar:1.17.1]
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    |      at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1381) [jersey-server-1.17.1.jar:1.17.1]
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    |      at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:416) [jersey-servlet-1.17.1.jar:1.17.1]
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    |      at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:538) [jersey-servlet-1.17.1.jar:1.17.1]
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    |      at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:716) [jersey-servlet-1.17.1.jar:1.17.1]
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    |      at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) [servlet-api.jar:na]
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    |      at com.google.inject.servlet.ServletDefinition.doService(ServletDefinition.java:263) [guice-servlet-3.0.jar:na]
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    |      at com.google.inject.servlet.ServletDefinition.service(ServletDefinition.java:178) [guice-servlet-3.0.jar:na]
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    |      at com.google.inject.servlet.ManagedServletPipeline.service(ManagedServletPipeline.java:91) [guice-servlet-3.0.jar:na]
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    |      at com.google.inject.servlet.FilterChainInvocation.doFilter(FilterChainInvocation.java:62) [guice-servlet-3.0.jar:na]
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    |      at com.google.inject.servlet.ManagedFilterPipeline.dispatch(ManagedFilterPipeline.java:118) [guice-servlet-3.0.jar:na]
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    |      at com.google.inject.servlet.GuiceFilter.doFilter(GuiceFilter.java:113) [guice-servlet-3.0.jar:na]
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    |      at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [catalina.jar:8.5.40]
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    |      at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [catalina.jar:8.5.40]
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    |      at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199) [catalina.jar:8.5.40]
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    |      at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [catalina.jar:8.5.40]
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    |      at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493) [catalina.jar:8.5.40]
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    |      at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:137) [catalina.jar:8.5.40]
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    |      at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81) [catalina.jar:8.5.40]
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    |      at org.apache.catalina.valves.RemoteIpValve.invoke(RemoteIpValve.java:679) [catalina.jar:8.5.40]
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    |      at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:660) [catalina.jar:8.5.40]
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    |      at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [catalina.jar:8.5.40]
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    |      at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [catalina.jar:8.5.40]
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    |      at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:798) [tomcat-coyote.jar:8.5.40]
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    |      at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-coyote.jar:8.5.40]
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    |      at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:808) [tomcat-coyote.jar:8.5.40]
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    |      at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498) [tomcat-coyote.jar:8.5.40]
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    |      at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-coyote.jar:8.5.40]
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    |      at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_212]
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    |      at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_212]
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    |      at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-util.jar:8.5.40]
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    |      at java.lang.Thread.run(Thread.java:748) [na:1.8.0_212]
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:15:48.123 [http-nio-8080-exec-1] WARN  o.a.g.e.AuthenticationProviderFacade - The "ldap" authentication provider has encountered an internal error which will halt the authentication process. If this is unexpected or you are the developer of this authentication provider, you may wish to enable debug-level logging. If this is expected and you wish to ignore such failures in the future, please set "skip-if-unavailable: ldap" within your guacamole.properties.
+vdi_guacamole2.1.iytle5jay8ee@swarm-3    | 07:15:48.123 [http-nio-8080-exec-1] WARN  o.a.g.r.auth.AuthenticationService - Authentication attempt from [10.255.0.2, 10.0.19.11] for user "userX" failed.
