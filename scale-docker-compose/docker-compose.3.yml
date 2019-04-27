@@ -25,7 +25,7 @@ services:
 ######      - type: volume
 ######        source: drive
 ######        target: /drive
-######        # Stores on the swarm node volume that is running the guacd container into file:
+######        # Stores on the swarm node volume that is running the guacd container into file: 
 ######        # /var/lib/docker/volumes/test_drive/_data
 ######        #
 ######        # where test is the name of the stack
@@ -58,7 +58,7 @@ services:
       - type: volume
         source: drive
         target: /drive
-        # Stores on the swarm node volume that is running the guacd container into file:
+        # Stores on the swarm node volume that is running the guacd container into file: 
         # /var/lib/docker/volumes/test_drive/_data
         #
         # where test is the name of the stack
@@ -71,7 +71,7 @@ services:
 #      - ${USERDIR}/docker/guacamole-docker-compose/record:/record:rw
     #####ports:
     #####  - 4822:4822
-
+    
   mysql:
     image: mysql:8.0.15
     networks:
@@ -108,17 +108,11 @@ services:
     restart: always
     #environment:
     #  VAR: /data
-    #    configs:
-    #  - source: ssl_public
-    #    target: /etc/nginx/conf.d/cert.pem
-    #  - source: ssl_private
-    #    target: /etc/nginx/conf.d/key.pem
     deploy:
       placement:
         constraints: [node.role == manager]
     ports:
       - 80:80
-      - 443:443
     depends_on:
       - guacd
       - mysql
@@ -215,11 +209,11 @@ services:
           - node.hostname != swarm-xrdp-2
     restart: always
 
-#sudo docker run --name some-guacamole
-#--link some-guacd:guacd --link some-mysql:mysql
-#-e MYSQL_DATABASE=guacamole_db -e MYSQL_USER=root -e MYSQL_PASSWORD=secret -e MYSQL_HOSTNAME=some_mysql -e MYSQL_PORT=3306 -e "LDAP_PORT=636" -e "LDAP_ENCRYPTION_METHOD=ssl" -e LDAP_HOSTNAME=ad.siu.edu -e "LDAP_USER_BASE_DN=dc=ad,dc=siu,dc=edu" -e "EXTENSIONS=auth-ldap"
+#sudo docker run --name some-guacamole 
+#--link some-guacd:guacd --link some-mysql:mysql 
+#-e MYSQL_DATABASE=guacamole_db -e MYSQL_USER=root -e MYSQL_PASSWORD=secret -e MYSQL_HOSTNAME=some_mysql -e MYSQL_PORT=3306 -e "LDAP_PORT=636" -e "LDAP_ENCRYPTION_METHOD=ssl" -e LDAP_HOSTNAME=ad.siu.edu -e "LDAP_USER_BASE_DN=dc=ad,dc=siu,dc=edu" -e "EXTENSIONS=auth-ldap" 
 
-#-v /home/cisadmin/guacamole/test:/home/cisadmin/guacamole/test
+#-v /home/cisadmin/guacamole/test:/home/cisadmin/guacamole/test 
 #-e GUACAMOLE_HOME=/home/cisadmin/guacamole/test -p 8080:8080 mbarkdoll-test/guacamole
 
   #railsapp:
@@ -244,10 +238,6 @@ configs:
     file: ./initdb.sql
   guacamole_properties_plain:
     file: ./guacamole.properties.plain
-    #  ssl_private:
-    #file: ./ssl/cert.pem
-    #  ssl_public:
-    #    file: ./ssl/key.pem
 
 secrets:
   guacamole_properties_secret:
